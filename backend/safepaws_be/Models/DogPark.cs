@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using NetTopologySuite.Geometries;
 
-namespace safepaws_be.Models;
+namespace safepaws_be;
 
 public partial class DogPark
 {

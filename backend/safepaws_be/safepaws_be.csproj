@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>7a36fbea-58e3-46f9-a5a7-5f41b146f0cf</UserSecretsId>
@@ -30,10 +30,6 @@
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL.NodaTime" Version="9.0.2" />
     <PackageReference Include="Npgsql.NetTopologySuite" Version="9.0.2" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="7.2.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Controllers\" />
   </ItemGroup>
 
 </Project>

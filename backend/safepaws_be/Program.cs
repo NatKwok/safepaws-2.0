@@ -10,7 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<SafepawsContext>(options =>
-    options.UseNpgsql("Host=localhost;Username=postgres;Password=^ytrO524FD;Database=mvc_webmap",
+    options.UseNpgsql("Host=localhost;Username=postgres;Password=^ytrO524FD;Database=safepaws",
                       x => x.UseNetTopologySuite()));
 
 var app = builder.Build();

@@ -33,7 +33,7 @@ public partial class Trail
 
     public string? Obstructions { get; set; }
 
-    public LocalDateTime? Installdate { get; set; }
+    public DateTime? Installdate { get; set; }
 
     public double? WidthM { get; set; }
 
@@ -47,17 +47,17 @@ public partial class Trail
 
     public string? Createduser { get; set; }
 
-    public LocalDateTime? Createddate { get; set; }
+    public DateTime? Createddate { get; set; }
 
     public string? Lastediteduser { get; set; }
 
-    public LocalDateTime? Lastediteddate { get; set; }
+    public DateTime? Lastediteddate { get; set; }
 
     public int? Lucityautoid { get; set; }
 
     public int? Inlucity { get; set; }
 
-    public LocalDateTime? Lastsyncdate { get; set; }
+    public DateTime? Lastsyncdate { get; set; }
 
     public int? Segmentlucityautoid { get; set; }
 
