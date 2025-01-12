@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using NetTopologySuite.Features;
+using Newtonsoft.Json;
 using safepaws_be;
 using safepaws_be.Data;
 
@@ -25,8 +27,67 @@ namespace safepaws_be.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<DogPark>>> GetDogParks()
         {
-            return await _context.DogParks.ToListAsync();
+            var feature = await _context.DogParks.ToListAsync();
+            var features = feature.Select(record =>
+            {
+                if (record.Geom == null)
+                    return null;
+
+                if (record.Geom is NetTopologySuite.Geometries.Polygon polygon)
+                {
+                    var polygonCoord = new List<List<Double[]>>()
+                    {
+                        polygon.ExteriorRing.Coordinates
+                                .Select(coord => new[] { coord.X, coord.Y }) // Flip to [latitude, longitude]
+                                .ToList()
+                    };
+
+                    var geoJsonPolygon = new
+                    {
+                        type = "Polygon",
+                        coordinates = polygonCoord
+                    };
+
+                    // Add additional properties from your model
+                    var properties = new Dictionary<string, object>
+                    {
+                        { "Id", record.Id },
+                        { "Category", record.Category },
+                        { "CivicNo", record.CivicNo },
+                        { "Status", record.Status },
+                        { "Municipality", record.MunicipalFacility },
+                        { "OWernship", record.Ownership },
+                        { "CreateDate", record.CreateDate },
+                        { "UpdateDate", record.UpdateDate }
+                    };
+
+                    // Create a GeoJSON Feature
+                    return new
+                    {
+                        type = "Feature",
+                        geometry = polygonCoord,
+                        properties
+                    };
+                }
+
+                return null;
+            })
+                .Where(feature => feature != null) // Filter out null features
+                .ToList();
+
+            var featureCollection = new
+            {
+                type = "FeatureCollection",
+                features
+            };
+
+            // Serialize to GeoJSON
+            var geoJson = JsonConvert.SerializeObject(featureCollection);
+
+            // Return GeoJSON with the appropriate content type
+            return Content(geoJson, "application/json");
         }
+        
 
         // GET: api/DogParks/5
         [HttpGet("{id}")]

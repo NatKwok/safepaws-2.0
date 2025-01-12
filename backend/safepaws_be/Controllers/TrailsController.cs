@@ -5,8 +5,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using NetTopologySuite.Geometries;
+using Newtonsoft.Json;
 using safepaws_be.Data;
 using safepaws_be.Models;
+using NetTopologySuite.Geometries;
 
 namespace safepaws_be.Controllers
 {
@@ -25,7 +28,60 @@ namespace safepaws_be.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Trail>>> GetTrails()
         {
-            return await _context.Trails.ToListAsync();
+            var feature =  await _context.Trails.Take(10).ToListAsync();
+            var features = feature.Select(record =>
+            {
+                if (record.Geom == null)
+                    return null;
+
+                if (record.Geom is MultiLineString multilinestring)
+                {
+                    var geojsonMultiLineString = new
+                    {
+                        type = "MultiLineString",
+                        coordinates = multilinestring.Geometries
+                            .Cast<LineString>()
+                            .Select(lineString =>
+                                lineString.Coordinates.Select(coord => new[] { coord.X, coord.Y }).ToArray()
+                            ).ToArray()
+                    };
+
+                    // Add additional properties from your model
+                    var properties = new Dictionary<string, object>
+                    {
+                        { "Id", record.Id },
+                        { "Name", record.Trailname },
+                        { "Type", record.Trailtype },
+                        { "Municipality", record.Municipality },
+                        { "Material", record.Surfacematerial },
+                        { "Install Date", record.Installdate }
+                    };
+
+                    // Create a GeoJSON Feature
+                    return new
+                    {
+                        type = "Feature",
+                        geometry = geojsonMultiLineString,
+                        properties
+                    };
+                }
+
+                return null;
+            })
+               .Where(feature => feature != null) // Filter out null features
+               .ToList();
+
+            var featureCollection = new
+            {
+                type = "FeatureCollection",
+                features
+            };
+
+            // Serialize to GeoJSON
+            var geoJson = JsonConvert.SerializeObject(featureCollection);
+
+            // Return GeoJSON with the appropriate content type
+            return Content(geoJson, "application/json");
         }
 
         // GET: api/Trails/5

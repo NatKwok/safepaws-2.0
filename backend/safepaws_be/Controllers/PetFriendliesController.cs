@@ -5,6 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using NetTopologySuite.Features;
+using Newtonsoft.Json;
+using NetTopologySuite.Geometries; 
 using safepaws_be.Data;
 using safepaws_be.Models;
 
@@ -25,7 +28,60 @@ namespace safepaws_be.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<PetFriendly>>> GetPetFriendlies()
         {
-            return await _context.PetFriendlies.ToListAsync();
+            var feature = await _context.PetFriendlies.ToListAsync();
+            var features = feature.Select(record =>
+            {
+
+                if (record.Geom == null)
+                {
+                    return null;
+                }
+
+                if (record.Geom is Point Point)
+
+                {
+                    var geojsonPoint = new
+                    {
+                        type = "Point",
+                        coordinates = new[] { record.Geom.X, record.Geom.Y }
+                    };
+
+                    var properties = new Dictionary<string, object>
+                    {
+                        { "Id", record.Id },
+                        { "Business Name", record.Businessname },
+                        { "Date", record.Date }
+                    };
+
+                    // Create a GeoJSON Feature
+                    return new
+                    {
+                        type = "Feature",
+                        geometry = geojsonPoint,
+                        properties
+                    };
+                }
+
+                return null;
+            })
+            .Where(feature => feature != null)
+            .ToList();
+
+            //Create a FeatureCollection
+            var featureCollection = new
+            {
+                type = "FeatureCollection",
+                features
+            };
+            //Serialize to GeoJSON
+            var geoJson = JsonConvert.SerializeObject(featureCollection, Formatting.Indented,
+                    new JsonSerializerSettings()
+                    {
+                        ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+                    });
+
+            // Return GeoJSON with appropriate content type
+            return Content(geoJson, "application/json");
         }
 
         // GET: api/PetFriendlies/5
