@@ -6,19 +6,21 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref } from 'vue'
 import { fetchHazards } from '@/api/hazardApi'
-
-export default defineComponent({
-  name: 'MyComponent',
-  setup() {
-    const data = ref(null)
-
-    onMounted(async () => {
-      data.value = await fetchHazards()
-    })
-
-    return { data }
+export default {
+  data() {
+    return {
+      data: null,
+    }
   },
-})
+  methods: {
+    async fetchData() {
+      try {
+        this.data = await fetchHazards()
+      } catch (error) {
+        console.error('Error fetching data:', error)
+      }
+    },
+  },
+}
 </script>
