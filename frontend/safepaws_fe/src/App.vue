@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
 import HazardList from './components/HazardList.vue'
+import BaseMap from './components/BaseMap.vue'
 </script>
 
 <template>
@@ -14,7 +14,7 @@ import HazardList from './components/HazardList.vue'
   </header>
 
   <main>
-    <HazardList />
+    <BaseMap />
   </main>
 </template>
 
