@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
+import TheWelcome from './components/TheWelcome.vue'
 import HazardList from './components/HazardList.vue'
 import BaseMap from './components/BaseMap.vue'
 </script>
@@ -14,7 +15,10 @@ import BaseMap from './components/BaseMap.vue'
   </header>
 
   <main>
+    TEST
+    <TheWelcome />
     <BaseMap />
+    TEST AFTER
   </main>
 </template>
 
