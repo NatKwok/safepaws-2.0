@@ -1,6 +1,5 @@
 import axios from 'axios'
 
-//base url
 const apiClient = axios.create({
   baseURL: 'http://localhost:5115/api/', // Adjust based on your .NET backend URL
   headers: {
@@ -9,7 +8,7 @@ const apiClient = axios.create({
 })
 
 export const fetchHazards = async () => {
-  const response = await apiClient.get('/hazards')
+  const response = await apiClient.get('/DogParks')
   return response.data
 }
 
