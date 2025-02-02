@@ -15,10 +15,10 @@ import BaseMap from './components/BaseMap.vue'
   </header>
 
   <main>
-    TEST
     <TheWelcome />
+    Map=======================================
     <BaseMap />
-    TEST AFTER
+    =============================================
   </main>
 </template>
 

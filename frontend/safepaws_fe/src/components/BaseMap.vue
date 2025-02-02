@@ -10,7 +10,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import 'leaflet/dist/leaflet.css'
 import { LMap, LTileLayer } from '@vue-leaflet/vue-leaflet'
 
@@ -27,15 +27,4 @@ export default {
 }
 </script>
 
-<style>
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
-
-main {
-  height: 100vh;
-  width: 100vw;
-}
-</style>
+<style></style>
