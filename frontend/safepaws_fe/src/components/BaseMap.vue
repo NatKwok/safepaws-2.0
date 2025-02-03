@@ -11,6 +11,7 @@
 </template>
 
 <script lang="ts">
+import 'leaflet'
 import 'leaflet/dist/leaflet.css'
 import { LMap, LTileLayer } from '@vue-leaflet/vue-leaflet'
 
