@@ -7,17 +7,14 @@
     </div>
   </header>
 
-  <main>
-    <TheWelcome />
-    <BaseMap />
-  </main>
+  <main>Welcome To SafePaws</main>
 </template>
 
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
 import HazardList from './components/HazardList.vue'
-import BaseMap from './components/BaseMap.vue'
+import BaseMap from './components/map/BaseMap.vue'
 </script>
 
 <style scoped>
