@@ -7,7 +7,10 @@
     </div>
   </header>
 
-  <main>Welcome To SafePaws</main>
+  <main>
+    Welcome To SafePaws
+    <BaseMap />
+  </main>
 </template>
 
 <script setup lang="ts">
