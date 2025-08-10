@@ -5,18 +5,29 @@
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
     </div>
+
   </header>
 
   <main>
+    <div>
     Welcome To SafePaws
-    <BaseMap />
+    	<i>Description: </i> This application is useful for determining the best path to walk you're dog. Hazards such as trash and glass are identified as well as trails, dog parks and dog friendly institutions	</br><b><i> Happy with your edits? export and send it to safepaws@gmail.com to be added to the application </i></b>
+
+
+    </div>
+    <div>
+      <BaseMap />
+    </div>
+
+
+
   </main>
 </template>
 
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
-import HazardList from './components/HazardList.vue'
+import HazardList from './components/items/HazardList.vue'
 import BaseMap from './components/map/BaseMap.vue'
 </script>
 

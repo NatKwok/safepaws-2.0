@@ -1,11 +1,3 @@
-<template>
-  <div style="height: 600px; width: 800px">
-    <l-map ref="map" v-model:zoom="zoom" :center="[43.47, -80.51]">
-      <l-tile-layer :url="url" :attribution="attribution" name="OpenStreetMap"></l-tile-layer>
-    </l-map>
-  </div>
-</template>
-
 <script lang="ts">
 import 'leaflet'
 import 'leaflet/dist/leaflet.css'
@@ -28,4 +20,10 @@ export default {
 }
 </script>
 
-<style></style>
+<template>
+  <div style="height: 600px; width: 800px">
+    <l-map ref="map" v-model:zoom="zoom" :center="[43.47, -80.51]">
+      <l-tile-layer :url="url" :attribution="attribution" name="OpenStreetMap"></l-tile-layer>
+    </l-map>
+  </div>
+</template>

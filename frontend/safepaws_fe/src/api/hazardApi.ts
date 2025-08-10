@@ -2,7 +2,7 @@ import axios from 'axios'
 
 //base url
 const apiClient = axios.create({
-  baseURL: 'http://localhost:5115/api/', // Adjust based on your .NET backend URL
+  baseURL: 'https://localhost:32771/api/Hazards', // Adjust based on your .NET backend URL
   headers: {
     'Content-Type': 'application/json',
   },

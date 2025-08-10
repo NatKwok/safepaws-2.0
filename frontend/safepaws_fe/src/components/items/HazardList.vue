@@ -1,17 +1,5 @@
-<!-- <div>
-    <h1>Hazard Test</h1>
-    <p>Click the button to fetch data with an HTTP request.</p>
-    <button @click="fetchData">Fetch data</button>
-    <pre v-if="data">{{ data }}</pre>
-  </div> -->
-<template>
-  <l-map style="height: 350px" :zoom="zoom" :center="center">
-    <l-tile-layer :url="url" :attribution="attribution"></l-tile-layer>
-    <l-geo-json :geojson="geojson"></l-geo-json>
-  </l-map>
-</template>
-
-<script>
+<script lang="ts">
+import 'leaflet'
 import { fetchHazards } from '@/api/hazardApi'
 import { geoJSON, latLng } from 'leaflet'
 import { LMap, LTileLayer, LGeoJson } from '@vue-leaflet/vue-leaflet'
@@ -24,7 +12,7 @@ export default {
   },
   data() {
     return {
-      // data: null,
+      data: null,
       url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
       attribution:
         '&copy; <a target="_blank" href="http://osm.org/copyright">OpenStreetMap</a> contributors',
@@ -45,3 +33,16 @@ export default {
   },
 }
 </script>
+
+<template>
+  <!-- <l-map style="height: 350px" :zoom="zoom" :center="center">
+    <l-tile-layer :url="url" :attribution="attribution"></l-tile-layer>
+    <l-geo-json :geojson="geojson"></l-geo-json>
+  </l-map> -->
+  <div>
+    <h1>Hazard Test</h1>
+    <p>Click the button to fetch data with an HTTP request.</p>
+    <button @click="fetchData">Fetch data</button>
+    <pre v-if="data">{{ data }}</pre>
+  </div>
+</template>
