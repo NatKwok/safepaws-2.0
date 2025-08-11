@@ -2,14 +2,14 @@ import axios from 'axios'
 
 //base url
 const apiClient = axios.create({
-  baseURL: 'https://localhost:32771/api/Hazards', // Adjust based on your .NET backend URL
+  baseURL: 'https://localhost:32775/api', // Adjust based on your .NET backend URL
   headers: {
     'Content-Type': 'application/json',
   },
 })
 
 export const fetchHazards = async () => {
-  const response = await apiClient.get('/hazards')
+  const response = await apiClient.get('/Hazards')
   return response.data
 }
 

@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\natkw\\Documents\\Projects\\safepaws-2.0\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{81DDED9D-158B-E303-5F62-77A2896D2A5A}|docker-compose.dcproj|c:\\users\\natkw\\documents\\projects\\safepaws-2.0\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{81DDED9D-158B-E303-5F62-77A2896D2A5A}|docker-compose.dcproj|solutionrelative:launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EE045A0-34C6-46C5-9DF2-16C866D1AF22}|backend\\safepaws_be\\safepaws_be.csproj|c:\\users\\natkw\\documents\\projects\\safepaws-2.0\\backend\\safepaws_be\\controllers\\dogparkscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EE045A0-34C6-46C5-9DF2-16C866D1AF22}|backend\\safepaws_be\\safepaws_be.csproj|solutionrelative:backend\\safepaws_be\\controllers\\dogparkscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EE045A0-34C6-46C5-9DF2-16C866D1AF22}|backend\\safepaws_be\\safepaws_be.csproj|c:\\users\\natkw\\documents\\projects\\safepaws-2.0\\backend\\safepaws_be\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EE045A0-34C6-46C5-9DF2-16C866D1AF22}|backend\\safepaws_be\\safepaws_be.csproj|solutionrelative:backend\\safepaws_be\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81DDED9D-158B-E303-5F62-77A2896D2A5A}|docker-compose.dcproj|c:\\users\\natkw\\documents\\projects\\safepaws-2.0\\docker-compose.dcproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{81DDED9D-158B-E303-5F62-77A2896D2A5A}|docker-compose.dcproj|solutionrelative:docker-compose.dcproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81DDED9D-158B-E303-5F62-77A2896D2A5A}|docker-compose.dcproj|c:\\users\\natkw\\documents\\projects\\safepaws-2.0\\docker-compose.override.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{81DDED9D-158B-E303-5F62-77A2896D2A5A}|docker-compose.dcproj|solutionrelative:docker-compose.override.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 225,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "docker-compose",
+              "DocumentMoniker": "C:\\Users\\natkw\\Documents\\Projects\\safepaws-2.0\\docker-compose.dcproj",
+              "RelativeDocumentMoniker": "docker-compose.dcproj",
+              "ToolTip": "C:\\Users\\natkw\\Documents\\Projects\\safepaws-2.0\\docker-compose.dcproj",
+              "RelativeToolTip": "docker-compose.dcproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-08-11T12:41:20.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\natkw\\Documents\\Projects\\safepaws-2.0\\launchSettings.json",
+              "RelativeDocumentMoniker": "launchSettings.json",
+              "ToolTip": "C:\\Users\\natkw\\Documents\\Projects\\safepaws-2.0\\launchSettings.json",
+              "RelativeToolTip": "launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-11T04:07:07.004Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "docker-compose.override.yml",
+              "DocumentMoniker": "C:\\Users\\natkw\\Documents\\Projects\\safepaws-2.0\\docker-compose.override.yml",
+              "RelativeDocumentMoniker": "docker-compose.override.yml",
+              "ToolTip": "C:\\Users\\natkw\\Documents\\Projects\\safepaws-2.0\\docker-compose.override.yml",
+              "RelativeToolTip": "docker-compose.override.yml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2025-08-10T14:26:40.853Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\natkw\\Documents\\Projects\\safepaws-2.0\\backend\\safepaws_be\\Program.cs",
+              "RelativeDocumentMoniker": "backend\\safepaws_be\\Program.cs",
+              "ToolTip": "C:\\Users\\natkw\\Documents\\Projects\\safepaws-2.0\\backend\\safepaws_be\\Program.cs",
+              "RelativeToolTip": "backend\\safepaws_be\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-25T01:48:10.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DogParksController.cs",
+              "DocumentMoniker": "C:\\Users\\natkw\\Documents\\Projects\\safepaws-2.0\\backend\\safepaws_be\\Controllers\\DogParksController.cs",
+              "RelativeDocumentMoniker": "backend\\safepaws_be\\Controllers\\DogParksController.cs",
+              "ToolTip": "C:\\Users\\natkw\\Documents\\Projects\\safepaws-2.0\\backend\\safepaws_be\\Controllers\\DogParksController.cs",
+              "RelativeToolTip": "backend\\safepaws_be\\Controllers\\DogParksController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAASwB0AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-30T04:59:52.955Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

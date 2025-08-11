@@ -16,7 +16,7 @@
 
     </div>
     <div>
-      <BaseMap />
+    <BaseMap />
     </div>
 
 

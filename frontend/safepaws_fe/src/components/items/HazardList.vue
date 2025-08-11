@@ -43,6 +43,6 @@ export default {
     <h1>Hazard Test</h1>
     <p>Click the button to fetch data with an HTTP request.</p>
     <button @click="fetchData">Fetch data</button>
-    <pre v-if="data">{{ data }}</pre>
+    <pre v-if="data" style="color: white">  {{ JSON.stringify(data, null, 2) }}</pre>
   </div>
 </template>
