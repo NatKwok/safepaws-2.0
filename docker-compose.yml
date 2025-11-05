@@ -1,0 +1,6 @@
+services:
+  safepaws_be:
+    image: ${DOCKER_REGISTRY-}safepawsbe
+    build:
+      context: backend/safepaws_be
+      dockerfile: backend/safepaws_be/Dockerfile

@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  safepaws_be:
+    build:
+      context: /backend
+      dockerfile: safepaws_be/Dockerfile
+    ports:
+      - "8080:8080"
+      - "8081:8081"
+    environment:
+      - DOTNET_RUNNING_IN_CONTAINER=true
+      - ASPNETCORE_URLS=http://+:8080

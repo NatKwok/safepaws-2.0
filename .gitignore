@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/obj/Docker/MergedDockerCompose47.cache
+/bin/Debug
+/obj
+/.idea
+/.vs/safepaws_be

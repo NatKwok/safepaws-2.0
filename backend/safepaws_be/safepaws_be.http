@@ -1,0 +1,6 @@
+@safepaws_be_HostAddress = http://localhost:5115
+
+GET {{safepaws_be_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

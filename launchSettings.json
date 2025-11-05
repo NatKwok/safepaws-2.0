@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "Docker Compose": {
+        "commandName": "DockerCompose",
+        "commandVersion": "1.0",
+        "serviceActions": {
+            "safepaws_be": "StartDebugging"
+        },
+        "launchUrl": "swagger",
+        "applicationUrl": "http://+:8080"
+        
+    }
+  }
+}
